@@ -1,0 +1,45 @@
+$60 FPS v2 and Wiimote Toggle [yorkiesandskittles, dreamsyntax]
+288144aa 00000008
+04868794 3f800000
+04792460 0000003c
+0419d33c 4e800020
+e0000000 80008000
+288144aa 00000004
+04868794 40000000
+04792460 0000001e
+0419d33c 806304c4
+e0000000 80008000
+*ON Wiimote:
+*D-pad Up for 60FPS
+*D-pad Down for 30FPS
+*
+*Can be used on menus/stages.
+*Resets automatically to 30fps per level. Bosses are broken with 60fps, so this toggle was made to allow the best of regular stages without needing to restart everytime.
+*
+*This also fixes the stopping bug with werehog while dashing in 60fps.
+*
+*Original code by yorkiesandskittles
+*Toggle and werehog fix added by dreamsyntax
+
+$60 FPS v2 and GC Toggle [yorkiesandskittles, dreamsyntax]
+28760BF7 00000008
+04868794 3F800000
+04792460 0000003C
+0419D33C 4E800020
+E0000000 80008000
+28760BF7 00000004
+04868794 40000000
+04792460 0000001E
+0419D33C 806304C4
+E0000000 80008000
+*ON GAMECUBE CONTROLLER:
+*D-pad Up for 60FPS
+*D-pad Down for 30FPS
+*
+*Can be used on menus/stages.
+*Resets automatically to 30fps per level. Bosses are broken with 60fps, so this toggle was made to allow the best of regular stages without needing to restart everytime.
+*
+*This also fixes the stopping bug with werehog while dashing in 60fps.
+*
+*Original code by yorkiesandskittles
+*Toggle and werehog fix added by dreamsyntax

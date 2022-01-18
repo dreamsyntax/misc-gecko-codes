@@ -1,0 +1,207 @@
+$Freecam for Normal Stages [dreamsyntax]
+041c820c 4e800020
+
+$Unlimited Raycast Tolerance [dreamsyntax]
+0409330C 4E800020
+
+$YellowAndroid MTP Animation Override [dreamsyntax, DonutStopGaming]
+c20b44dc 00000009
+3e00807d 621018c4
+7c058000 39e00000
+41820030 3a050004
+82100000 82100014
+3de05357 61ef3250
+80900000 7c0f2000
+39e00000 4082000c
+3a10fcf4 39e02729
+809f085c 00000000
+c201483c 00000003
+2c0f2729 40820008
+92030014 80030014
+60000000 00000000
+c20b474c 00000004
+38210020 3de0807d
+61ef866c 3e00809d
+621093a8 920f0000
+60000000 00000000
+*shadow2py.one archive MUST CONTAIN:
+*HS.BON
+*SONDOW.MTP
+*IN THAT ORDER at the bottom of the file
+*
+*You can put whatever BON/MTP you want, including whatever models, but the name must match the above.
+*
+*The other androids must not contain custom MTP with this version of the code.
+
+$Unrestrict Geo/Coli Names v2 [dreamsyntax]
+C21E280C 00000006
+81E100F4 3E008004
+62106720 7C0F8000
+40820014 3DE0801E
+61EF2814 7DE803A6
+4E800020 2C030000
+60000000 00000000
+*Allows for using as many chunks as you want without being constrained to the stage's original properties. Names do not need to match original files with this code on. This makes importing and creating new levels in Shadow much easier.
+*
+*v2 properly routes non-geo/coli unlike v1, so no more crashing on events
+*
+*Geo models must still follow:
+*[NAME]_[MATTYPE]_[CHUNKNUM]
+*
+*Collision models must still follow:
+*[NAME]_COLI_[CHUNKNUM]
+*
+*The 2nd and 3rd params can be swapped
+
+SuperShadow TestVer v0.6 [dreamsyntax]
+0417711C 60000000
+045F077C 00000000
+045F936C 43C80000
+045F2720 451C4000
+C60AF2E4 800AF3BC
+C20A860C 0000000C
+8A04000B 2C100040
+40820050 3E00807D
+621071A0 82100000
+82100000 89F000AF
+3A200020 7C117800
+9A3000AF 3DE0805F
+61EF27A0 3E203DCC
+6231CCCD 922F0000
+3A200000 40820014
+9A3000AF 3E203ECC
+6231CCCD 922F0000
+38C00001 00000000
+C22EB21C 0000000B
+388500DC C0050000
+D0040000 C0050004
+C022FC8C 3E008057
+62105D5E 8A100000
+2C100008 40820008
+EC00082A 3E00805A
+62105816 8A100000
+2C1000FF 40820008
+EC000828 D0040004
+C0050008 D0040008
+60000000 00000000
+*Press "D-pad UP" to switch fly on/off (must homing attack after, you can buffer a switch in advance)
+*Hold Z to ascend
+*Hold L to descend
+*Spammable Dash While Flying
+*2.5x faster homing attack
+*
+*Does not deplete rings
+*Shooting a chaos spear while dying will result in a crash
+*Dying while in flying mode results in respawning in the same spot you died, with broken camera
+
+Jump Ball Color Switch v2 [dreamsyntax]
+C20A5AB0 00000003
+80840064 2C04000E
+40820008 3880000X
+60000000 00000000
+C2087190 00000003
+80040064 2C00000E
+40820008 3800000X
+60000000 00000000
+C2080734 00000003
+80040064 2C00000E
+40820008 3800000X
+60000000 00000000
+*v2 changes player's ball only
+*Change all 3 X to valid values:
+*0 = (Default Orange, but White Homing Attack)
+*1 = Sonic (Blue)
+*2 = Tails (Yellow)
+*3 = Knuckles (Red)
+*4 = Amy (Light Pink) 
+*5 = Rouge (Very Light Purple)
+*6 = Omega (Red, Large Radius)
+*7 = Vector (Green, Large Radius)
+*8 = Espio (Light Blue)
+*9 = Maria (Default Orange, but White Homing Attack)
+*A = Bee (Default Orange, but White Homing Attack)
+*B = Eggmonitor (Default Orange, but White Homing Attack)
+*C = Dooms Eye (Default Orange, but White Homing Attack)
+
+$Jump Ball Color Switch [dreamsyntax] (OLD)
+C20A5AB0 00000001
+3880000X 00000000
+C2087190 00000001
+3800000X 00000000
+C2080734 00000001
+3800000X 00000000
+*Applies to every object with jump ball. v2 will be player specific.
+*Change all 3 X to valid values:
+*1 = Sonic (Blue)
+*2 = Tails (Yellow)
+*3 = Knuckles (Red)
+*4 = Amy (Light Pink) 
+*5 = Rouge (Very Light Purple)
+*6 = Omega (Red, Large Radius)
+*7 = Vector (Green, Large Radius)
+*8 = Espio (Light Blue)
+*9 = Maria (Default Orange, but White Homing Attack)
+*A = Bee (Default Orange, but White Homing Attack)
+*B = Eggmonitor (Default Orange, but White Homing Attack)
+*C = Dooms Eye (Default Orange, but White Homing Attack)
+
+
+$Camera Updates for Events Only [dreamsyntax]
+C22706D4 00000001
+60000000 00000000
+
+$Play as BATTLE Characters in 1P Mode v2 [dreamsyntax]
+0417707C 38800320
+041770F4 60000000
+0440DB30 38000000
+*Select P1's character in 2P GAME (BATTLE), back out to main menu at P2's turn to select. 
+*P1 will retain the character for use in 1P modes. 
+*No controller needed in slot 2 to choose character for P1.
+*
+*Bug:
+*Android characters will not work for Last Story's Devil Doom (crash).
+
+$GUNMech Physics Revamp [dreamsyntax]
+041ACF70 60000000
+041ACF74 60000000
+041ACCFC 60000000
+041AE7B0 60000000
+*Makes hover useful (fast) 
+*Tight turns
+*Dismountable mid-air
+
+$2P Optionals Unique Android JumpBall Colors [dreamsyntax]
+C20A5AB0 0000000A
+80840064 2C04000F
+41800044 4181000C
+38800002 41820038
+2C040010 4181000C
+38800004 41820028
+2C040011 4181000C
+38800001 41820018
+2C040012 4181000C
+38800006 41820008
+38800007 00000000
+C2087190 0000000A
+80040064 2C00000F
+41800044 4181000C
+38000002 41820038
+2C000010 4181000C
+38000004 41820028
+2C000011 4181000C
+38000001 41820018
+2C000012 4181000C
+38000006 41820008
+38000007 00000000
+C2080734 0000000A
+80040064 2C00000F
+41800044 4181000C
+38000002 41820038
+2C000010 4181000C
+38000004 41820028
+2C000011 4181000C
+38000001 41820018
+2C000012 4181000C
+38000006 41820008
+38000007 00000000
+*Gives all the 2P Androids custom JumpBall colors
