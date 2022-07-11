@@ -259,3 +259,104 @@ $Experimental 60FPS Events [dreamsyntax]
 0457d6f0 00000078
 *Might not be stable.
 *
+
+
+$Partner Intros on first Story run only [LimblessVector]
+2A578068 00000000
+04073e10 4800004C
+e2000001 80008000
+*The special zoom-in cameras that play when you meet a partner will only occur during your first run of Story Mode.
+*Recommended if this is your first time playing the game.
+
+$Jump Dash physics tweaks [LimblessVector]
+2257d748 000002c6
+045f27a0 3f400000
+045f27a4 7f800000
+045f27a8 432f0000
+045f27b0 43898000
+045f27b4 43960000
+045f27b8 41c80000
+e2000001 80008000
+2057d748 000002c6
+045f27a0 3ecccccd
+045f27a4 40000000
+045f27a8 43340000
+045f27b0 43d70000
+045f27b4 435c0000
+045f27b8 40d00000
+e2000001 80008000
+*The Jump Dash will lose a bit of the instant forward speed in return for greatly increased control. You can still cover a similar distance by holding the control stick forward during a Jump Dash.
+*(These edits are reverted for Devil Doom)
+*Jump Dash Duration: 0.4 -> 0.75
+*Jump Dash Momentum Thing: 2 -> Inf
+*Jump Dash Initial Velocity: 180 -> 175
+*Jump Dash Gradual Velocity: 430 -> 275
+*Jump Dash Steer: 220 -> 300
+*Jump Dash Turn Speed: 6.5 -> 25
+*
+
+$Jump Ball Duration [LimblessVector]
+045F2794 3f700000
+*0.75->0.9375
+*Increased. Player can hold the jump button to stay in jump ball form slightly longer, allowing for more time floating at the apex.
+*
+$Chaos Blast Range [LimblessVector]
+045ee390 43d48000
+*200->425
+*Increased. Chaos Blast now covers over twice as much area.
+*
+
+$Expert CC Stop [LimblessVector]
+2857D7C5 00000001
+0057D750 00000001
+E2000001 80008000
+*Replaces the regular Chaos Control with the boss version while in Expert.
+*
+$=== Experimental Major Physics ===
+*Below are major changes to how physics affect gameplay.
+* ENABLING THESE WILL BREAK MANY STAGE INTERACTIONS.
+* You may be flung into pits or get caught in input-disabling trigger areas.
+*
+$Air Friction [LimblessVector]
+045e4580 40100000
+*3->2.2
+*Lowered. Player will keep more air momentum longer.
+*
+$Character Gravity [LimblessVector]
+045f2bd8 c3a28000
+*-320->-325
+*Strengthened. Player will fall faster and gain less height from upwards velocity.
+*Affects both player and partner characters.
+*
+$Gravity/Jump Modifier [LimblessVector]
+045e4584 3f666666
+*1->0.9
+*Lowered. Allows player to jump higher, but fall faster.
+*
+$Dash Ramp Force [LimblessVector]
+045f3af4 bf59999a
+*-1->-0.85
+*Weakened to compensate for less air friction.
+*
+$Spring Strength [LimblessVector]
+045f3ee4 3f600000
+*1->0.875
+*Weakened to compensate for less air friction.
+
+$Select Mode cursor no reset [LimblessVector]
+062c7ea0 00000024
+38834560 83440000
+2C1A0000 40820018
+83440004 2C1A0000
+4082000C 38600002
+90640004 00000000
+*The stage select cursor won't reset to Westopolis every time you return to the Select Mode screen.
+*
+$Title always skippable [LimblessVector]
+0057D720 00000000
+*Allows you to always press start to skip the title screen animation.
+*
+
+$Mute music and cutscenes
+0458F99C 00000000
+0458FA90 00000000
