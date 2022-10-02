@@ -360,3 +360,103 @@ $Title always skippable [LimblessVector]
 $Mute music and cutscenes
 0458F99C 00000000
 0458FA90 00000000
+
+
+
+
+
+$GUNLift Adjustment [dreamsyntax]
+045F9A20 43480000
+045F9A24 43C80000
+045F9A28 00000000
+045F9A2C 00000000
+*GUNLift (Express) now always travels at A-Hold speed.
+*A button instead stops the GUN Lift
+*
+$WatchCamera Behavior Adjustment [dreamsyntax]
+04269448 48000028
+*Makes WatchCamera objs (GUN Fortress) continuously aim and fire
+*The WatchCamera will continue to shoot at last known area if player was detected
+*
+$Handle EnemyData Corruption Safely (Experimental) [dreamsyntax]
+C22CD898 00000004
+546F273E 2C0F0008
+41820010 39E00001
+2C0F0001 41820008
+281E0000 00000000
+*Experimental code that makes enemies abort loading data if the reference is corrupted
+*ONLY applies to Enemy objects. The health indicator and drop shadow will still load
+*The player can move out of render distance and re-enter it to make the enemy try to load again
+*The original game crashes if the data is corrupted
+*
+$Handle EnemyAI Core (Target) Corruption Safely (Experimental) [dreamsyntax]
+C2319A8C 00000005
+807C0000 546F273E
+2C0F0008 41820014
+3DE08031 61EF9AD0
+7DE803A6 4E800020
+60000000 00000000
+*Corrupted enemies will no longer crash the game but will not be targetable with lock-on weapons, and will also be unable to target Shadow
+*
+$Handle ContainerBehavior Corruption Safely (Experimental) [dreamsyntax]
+C20EF60C 00000007
+7C832378 546F273E
+2C0F0008 40820018
+81E30000 55EF273E
+2C0F0008 40820008
+41820014 3DE0800E
+61EFF624 7DE803A6
+4E800020 00000000
+*This type of corruption most commonly occurs on Lost Impact / The Doom
+*
+$Melee Physics Revamp r2 [dreamsyntax]
+045F2700 459C4000
+C20835DC 00000005
+3DE0804A 61EFBF04
+C0030000 C0230004
+D00F0000 C0030008
+D02F0004 D00F0008
+807F0004 00000000
+C20841C0 0000000C
+39E30024 3C80804A
+6084BF04 3861003C
+3E00805F 62102704
+C0700000 C0430000
+C0040000 C0240004
+EC42002A EC421824
+C0040008 D0430000
+C0430004 EC22082A
+EC211824 D0230004
+C0230008 EC01002A
+EC001824 D0030008
+60000000 00000000
+C20841C4 00000002
+7C641B78 7DE37B78
+60000000 00000000
+*Recommend disabling Slide on B if using.
+*
+*Calculates the average between current force and the set value of 5000. Does not allow for top speeds greater than 6,500 (8000 is running max) in this version. Acceleration is gradual since it is an average between current speed and the swing set value.
+*
+*TODO Should disable for case of holding melee weapon automatically in the future.
+*
+*Melee Travel Speed
+*400 -> 5000
+*
+$Melee Physics Revamp (State Correction) [dreamsyntax]
+C208703C 00000004
+3DE0804A 61EFBF04
+D0CF0000 D0CF0004
+D0CF0008 9421FFF0
+60000000 00000000
+*WIP Additive for r2 Melee Revamp
+*
+$LightDash L-Cancel [LimblessVector]
+2856ED4E EFFF1000
+045F280C 00000000
+E2000001 80008000
+2A56ED4E EFFF1000
+045F280C 42960000
+E2000001 80008000
+*The LightDash can be cancelled by pressing L.
+*Also adjusts continued next light dash angle by 45->75.
+*
