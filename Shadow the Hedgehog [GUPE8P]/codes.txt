@@ -460,3 +460,11 @@ E2000001 80008000
 *The LightDash can be cancelled by pressing L.
 *Also adjusts continued next light dash angle by 45->75.
 *
+
+$R Button PressBack in Main Menu [dreamsyntax, BlazinZzetti]
+C23562A0 00000003
+7C9D002E 28042000
+40820008 38800002
+60000000 00000000
+*Adds 'R' button as a PressBack alias for Main Menu
+*Intended for if you swap B/R buttons in Dolphin but want B (which will register as R) to still back out of menus.
