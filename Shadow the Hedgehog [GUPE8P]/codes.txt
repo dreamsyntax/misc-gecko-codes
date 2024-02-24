@@ -468,3 +468,127 @@ C23562A0 00000003
 60000000 00000000
 *Adds 'R' button as a PressBack alias for Main Menu
 *Intended for if you swap B/R buttons in Dolphin but want B (which will register as R) to still back out of menus.
+
+
+$GUNLift Adjustment [dreamsyntax]
+045F9A20 43480000
+045F9A24 43C80000
+045F9A28 00000000
+045F9A2C 00000000
+*GUNLift (Express) now always travels at A-Hold speed.
+*A button instead stops the GUN Lift
+*
+$WatchCamera Behavior Adjustment [dreamsyntax]
+04269448 48000028
+*Makes WatchCamera objs (GUN Fortress) continuously aim and fire
+*The WatchCamera will continue to shoot at last known area if player was detected
+*
+$Handle EnemyData Corruption Safely (Experimental) [dreamsyntax]
+C22CD898 00000004
+546F273E 2C0F0008
+41820010 39E00001
+2C0F0001 41820008
+281E0000 00000000
+*Experimental code that makes enemies abort loading data if the reference is corrupted
+*ONLY applies to Enemy objects. The health indicator and drop shadow will still load
+*The player can move out of render distance and re-enter it to make the enemy try to load again
+*The original game crashes if the data is corrupted
+*
+$Handle EnemyAI Core (Target) Corruption Safely (Experimental) [dreamsyntax]
+C2319A8C 00000005
+807C0000 546F273E
+2C0F0008 41820014
+3DE08031 61EF9AD0
+7DE803A6 4E800020
+60000000 00000000
+*Corrupted enemies will no longer crash the game but will not be targetable with lock-on weapons, and will also be unable to target Shadow
+*
+$Handle ContainerBehavior Corruption Safely (Experimental) [dreamsyntax]
+C20EF60C 00000007
+7C832378 546F273E
+2C0F0008 40820018
+81E30000 55EF273E
+2C0F0008 40820008
+41820014 3DE0800E
+61EFF624 7DE803A6
+4E800020 00000000
+*This type of corruption most commonly occurs on Lost Impact / The Doom
+
+
+$Dab over Launch [LimblessVector]
+040b5298 3860007E
+*
+$No ChaosPowers Camera [dreamsyntax]
+0407b400 60000000
+0407c4b0 60000000
+*Disables event camera for chaos power activation and usage.
+*
+$Simple Widescreen [CosmoCortney, TeconMoon, LimblessVector]
+0458412c 3f9f7cee
+*Requires Dolphin to be forced 16:9.
+*Movies, HUD, and menus are stretched to cover the screen.
+*Not 100% perfect, but you won't generally see any weirdness.
+*
+$Turret Rotation Speed Control (Prototype) [dreamsyntax]
+045F9A40 3FC00000
+2856ED4E DFFF2000
+045F9A40 40400000
+E2000001 80008000
+2856ED4E EFFF1000
+045F9A40 3F000000
+E2000001 80008000
+*Holding R = Faster Turn Speed
+*Holding L = Slower Turn Speed
+*
+*Applies to GUN Turret only
+*Seems to only re-check on all button release; Gecko limitation?
+*
+$Fog Fix (Manual Override) v1 [dreamsyntax]
+C2497A9C 00000004
+57EFC42E 57F0421E
+57FF060E 7FFF7A14
+7FFF8214 93FE0018
+60000000 00000000
+C216A844 00000002
+3C80804A 6084BF00
+80840000 00000000
+*Fix the Green/Red Fog and BG mismatch
+*Also sets fog computed result to
+*UURRGGBB WORD value at @ 804ABF00
+*Edit this memory to change realtime
+*
+*UU/BB are related, and need to offset RR
+*
+$Fog Fix Debug
+C2497A9C 00000004
+57EFC42E 57F0421E
+57FF060E 7FFF7A14
+7FFF8214 93FE0018
+60000000 00000000
+$Unlimited Raycast Tolerance [dreamsyntax]
+0409330C 4E800020
+*Only intended for debugging and researching fixing gravity related bugs in Space Gadget
+*
+$Unrestrict Hardcoded Names v1 [dreamsyntax]
+041E2810 60000000
+*Note, this will crash on event load (stage complete, or cutscenes)
+*
+$Unrestrict Geo/Coli Names v2 [dreamsyntax]
+C21E280C 00000006
+81E100F4 3E008004
+62106720 7C0F8000
+40820014 3DE0801E
+61EF2814 7DE803A6
+4E800020 2C030000
+60000000 00000000
+*Allows for using as many chunks as you want without being constrained to the stage's original properties. Names do not need to match original files with this code on. This makes importing and creating new levels in Shadow much easier.
+*
+*Geo models must still follow:
+*[NAME]_[MATTYPE]_[CHUNKNUM]
+*
+*Collision models must still follow:
+*[NAME]_COLI_[CHUNKNUM]
+*
+*The 2nd and 3rd params can be swapped
+$No fade screen
+040448a0 4e800020
