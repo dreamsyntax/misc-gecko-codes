@@ -592,3 +592,9 @@ C21E280C 00000006
 *The 2nd and 3rd params can be swapped
 $No fade screen
 040448a0 4e800020
+
+$Unlimited Wallrun Distance [dreamsyntax]
+045F2950 47C35000
+
+$Unlimited Wallcling Time [dreamsyntax]
+045F2960 47C35000
